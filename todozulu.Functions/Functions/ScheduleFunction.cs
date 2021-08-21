@@ -12,7 +12,7 @@ namespace todozulu.Functions.Functions
     {
         [FunctionName("ScheduleFunction")]
         public static async Task Run(
-            [TimerTrigger("0 */2 * * * *")]TimerInfo myTimer,
+            [TimerTrigger("0 */2 * * * *")] TimerInfo myTimer,
             [Table("todo", Connection = "AzureWebJobsStorage")] CloudTable todoTable,
             ILogger log)
         {
